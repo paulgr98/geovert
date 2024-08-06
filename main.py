@@ -25,8 +25,10 @@ def main():
 def process_file(file_path):
     if file_path is None:
         print("File path is empty.")
+        return
     if not validate_file_extension(file_path):
         print("Invalid file extension. Expected .csv file.")
+        return
     data_frame = get_data_frame(file_path)
     output_file_path = get_output_file_path(file_path)
     export_to_xlsx(data_frame, output_file_path)
@@ -101,9 +103,22 @@ def export_to_xlsx(df, output_file_path):
 
 
 def process_directory(directory_path):
-    get_all_csv_files(directory_path)
-    for file_path in get_all_csv_files(directory_path):
+    if not is_directory_valid(directory_path):
+        print("Invalid directory path.")
+        return
+    files_to_process = get_all_csv_files(directory_path)
+    if not files_to_process:
+        print("No CSV files found in the directory.")
+        return
+    else:
+        print(f"Processing {len(files_to_process)} files.")
+
+    for file_path in files_to_process:
         process_file(file_path)
+
+
+def is_directory_valid(directory_path):
+    return os.path.isdir(directory_path)
 
 
 def get_all_csv_files(directory_path):
@@ -118,6 +133,6 @@ def get_all_csv_files(directory_path):
 if __name__ == "__main__":
     try:
         main()
-        print("Program finished successfully.")
+        print("Program finished.")
     except Exception as e:
         print(f"An error occurred: {e}")

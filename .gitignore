@@ -361,3 +361,4 @@ cython_debug/
 
 # User Added
 /test
+/output
