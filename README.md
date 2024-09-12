@@ -31,32 +31,6 @@ You can use this program to convert a single CSV file or all CSV files in a dire
 python main.py -f path/to/yourfile.csv
 ```
 
-[//]: # (GeoVert
-[//]: # (This is a simple Python program that converts Geosense's survey CSV files into XML and XLSX files, which can later be imported into other programs.  
-[//]: # (Prerequisites
-[//]: # (Python 3.x
-[//]: # (pandas library
-[//]: # (openpyxl library
-[//]: # (Installation
-[//]: # (Clone the repository: Use the git clone command to clone the repository and navigate into the project directory.  
-[//]: # (Install the required libraries: Use pip install to install the pandas and openpyxl libraries.  
-[//]: # (Usage
-[//]: # (You can use this program to convert a single CSV file or all CSV files in a directory.  
-[//]: # (Convert a Single CSV File
-[//]: # (Run the main.py script with the -f option followed by the path to your CSV file.  
-[//]: # (Convert All CSV Files in a Directory
-[//]: # (Run the main.py script with the -d option followed by the path to your directory containing CSV files.  
-[//]: # (Example
-[//]: # (To convert a single CSV file, use the -f option followed by the path to the file.  To convert all CSV files in a directory, use the -d option followed by the path to the directory.  
-[//]: # (Contributing
-[//]: # (Fork the repository.
-[//]: # (Create a new branch.
-[//]: # (Commit your changes.
-[//]: # (Push to the branch.
-[//]: # (Create a new Pull Request.
-[//]: # (License
-[//]: # (This project is licensed under the MIT License.)
-
 ### Convert a Single CSV File
 
 Run the `main.py` script with the `-f` option followed by the path to your CSV file.
